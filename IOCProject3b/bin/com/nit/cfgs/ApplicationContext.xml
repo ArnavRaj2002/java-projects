@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+            <bean id="cust" class="com.nit.sbeans.Customer">
+             <property name="customerName" value="Arnav"></property>
+             <property name="customerAddress" value="LsCollege"></property>
+              <property name="balance" value="20000"></property>
+             <property name="bank" ref="bank"></property>
+            </bean>
+            <bean id="bank" class="com.nit.sbeans.Bank">
+            <property name="bankName" value="HDFC"></property>
+            <property name="ifscCode" value="hdfc101muz"></property>
+            <property name="bankAddress" value="kalambagh"></property>
+            </bean>
+           </beans>

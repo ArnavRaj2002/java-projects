@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           
+           <bean id="cust" class="com.nit.sbeans.Customer">
+             <property name="customerName" value="Alice"></property>
+             <property name="contactNumber" value="555-1234"></property>
+             
+           </bean>
+           <bean id="ord" class="com.nit.sbeans.Order">
+               <property name="orderId" value="ORD001"></property>
+               <property name="quantity" value="3"></property>
+               <property name="product" ref="prod"></property>
+               <property name="customer" ref="cust"></property>
+             
+           </bean>
+           <bean id="prod" class="com.nit.sbeans.Product">
+             <property name="productName" value="Smartphone"></property>
+             <property name="price" value="799.99"></property>
+           </bean>
+           <bean id="ship" class="com.nit.sbeans.Shipment">
+              <property name="shipmentId" value="SHIP100"></property>
+              <property name="address" value="123 Main St"></property>
+               <property name="order" ref="ord"></property>
+           </bean>
+           
+           
+           </beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+           <bean id="lib" class="com.nit.sbeans.Library">
+            <property name="book1" ref="book1"></property>
+            <property name="book2" ref="book2"></property>
+            <property name="book3" ref="book3"></property>
+           </bean>
+           <bean id="book1" class="com.nit.sbeans.Book">
+           <property name="title" value="C"></property>
+           <property name="author" value="Dennis Richie"></property>
+           </bean>
+            <bean id="book2" class="com.nit.sbeans.Book">
+           <property name="title" value="JAVA"></property>
+           <property name="author" value="James-Gosling"></property>
+           </bean>
+            <bean id="book3" class="com.nit.sbeans.Book">
+           <property name="title" value="Spring"></property>
+           <property name="author" value="Rod Johnson"></property>
+           </bean>
+           </beans>
