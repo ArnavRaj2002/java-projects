@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd">
+           <context:component-scan base-package="com.nit.sbeans"/> 
+           
+           <bean id="stu" class="com.nit.sbeans.Student">
+            <property name="rollNo" value="215"></property>
+            <property name="name" value="Scott"></property>
+            <property name="marks">
+             <list>
+                <value>85</value>
+                <value>90</value>
+                <value>72</value>
+                <value>80</value>
+                <value>95</value>
+             </list>
+            </property>
+           </bean>
+           </beans>
